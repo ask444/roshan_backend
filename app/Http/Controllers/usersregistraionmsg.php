@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Mail;
+use Redirect;
 use App\Mail\SendMailable;
 
 use App\Http\Requests;
@@ -37,9 +38,11 @@ class usersregistraionmsg extends Controller
             Mail::to('ashok.ng786@gmail.com')->send(new SendMailable($name));
             
             // return 'Email was sent';
-          
+            return Redirect::to('http://minmapadmin.herokuapp.com');
 
-            return response()->json(array('success' => true, 'user_created' => 1), 200);      
+            // return response()->json(array('success' => true, 'user_created' => 1), 200); 
+            
+            
         }
     }
 
