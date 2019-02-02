@@ -34,8 +34,8 @@ class usersregistraionmsg extends Controller
                 // echo "Basic Email Sent. Check your inbox.";
             //  }
 
-            $name = 'ASHOK';
-            Mail::to('ashok.ng786@gmail.com')->send(new SendMailable($name));
+            $name = $request['name'];;
+            Mail::to($email)->send(new SendMailable($name));
             
             // return 'Email was sent';
             return Redirect::to('http://minmap.herokuapp.com');
