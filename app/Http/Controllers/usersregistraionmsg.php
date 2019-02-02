@@ -38,7 +38,7 @@ class usersregistraionmsg extends Controller
             Mail::to('ashok.ng786@gmail.com')->send(new SendMailable($name));
             
             // return 'Email was sent';
-            return Redirect::to('http://minmapadmin.herokuapp.com');
+            return Redirect::to('http://minmap.herokuapp.com');
 
             // return response()->json(array('success' => true, 'user_created' => 1), 200); 
             
