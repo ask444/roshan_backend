@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Mail;
+use App\Mail\SendMailable;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -22,18 +23,34 @@ class usersregistraionmsg extends Controller
 
 
             // public function basic_email() {
-                $data = array('name'=>"Virat Gandhi");
+                // $data = array('name'=>"Virat Gandhi");
              
-                Mail::send(['text'=>'mail'], $data, function($message) {
-                   $message->to('ashok.ng786@gmail.com', 'Tutorials Point')->subject
-                      ('Laravel Basic Testing Mail');
-                   $message->from('ashok.ng786@gmail.com','Virat Gandhi');
-                });
-                echo "Basic Email Sent. Check your inbox.";
+                // Mail::send(['text'=>'mail'], $data, function($message) {
+                //    $message->to('ashok.ng786@gmail.com', 'Tutorials Point')->subject
+                //       ('Laravel Basic Testing Mail');
+                //    $message->from('ashok.ng786@gmail.com','Virat Gandhi');
+                // });
+                // echo "Basic Email Sent. Check your inbox.";
             //  }
+
+            $name = 'ASHOK';
+            Mail::to('ashok.ng786@gmail.com')->send(new SendMailable($name));
+            
+            // return 'Email was sent';
           
 
             return response()->json(array('success' => true, 'user_created' => 1), 200);      
         }
     }
+
+    // public function mail()
+    // {
+    //    $name = 'Krunal';
+    //    Mail::to('krunal@appdividend.com')->send(new SendMailable($name));
+       
+    //    return 'Email was sent';
+    // }
+    
+
+
 }
