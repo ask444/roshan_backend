@@ -27,6 +27,8 @@
 
                         <th>@lang('quickadmin.users.fields.name')</th>
                         <th>@lang('quickadmin.users.fields.email')</th>
+                        <th>phone</th>
+                        <th>gender</th>
                         <th>@lang('quickadmin.users.fields.role')</th>
                                                 <th>&nbsp;</th>
 
@@ -43,6 +45,8 @@
 
                                 <td field-key='name'>{{ $user->name }}</td>
                                 <td field-key='email'>{{ $user->email }}</td>
+                                <td field-key='email'>{{ $user->phone }}</td>
+                                <td field-key='email'>{{ $user->gender }}</td>
                                 <td field-key='role'>{{ $user->role->title ?? '' }}</td>
                                                                 <td>
                                     @can('user_view')
