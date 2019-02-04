@@ -16,9 +16,8 @@ class usersregistraionmsg extends Controller
         $email = $request['email'];
         $name=$request['name'];
         $phone=$request['phone'];
-        $gender=$request['gender'];
         $newUser=  DB::table('users')->insert(
-            ['email' => $email,'name'=>$name,'password'=>'password','phone'=>$phone,'gender'=>$gender]
+            ['email' => $email,'name'=>$name,'password'=>'password','phone'=>$phone]
         );  
         if($newUser){
 

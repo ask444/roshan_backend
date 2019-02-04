@@ -13,7 +13,7 @@ class UserSeed extends Seeder
     {
         $items = [
             
-            ['id' => 1, 'name' => 'Admin', 'email' => 'admin@admin.com','phone'=>99999,'gender'=>'male', 'password' => '$2y$10$gJJueEpApwsmsBw/kA0OO.eK84Pdtx.VpHYY/T8N/PA/UPE66WIX.', 'role_id' => 1, 'remember_token' => '',],
+            ['id' => 1, 'name' => 'Admin', 'email' => 'admin@admin.com','phone'=>99999, 'password' => '$2y$10$gJJueEpApwsmsBw/kA0OO.eK84Pdtx.VpHYY/T8N/PA/UPE66WIX.', 'role_id' => 1, 'remember_token' => '',],
 
         ];
 
